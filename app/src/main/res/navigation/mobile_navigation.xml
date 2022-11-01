@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.listintime.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_movies"
+        android:name="com.listintime.ui.movies.MoviesFragment"
+        android:label="@string/menu_movies"
+        tools:layout="@layout/fragment_movies" />
+
+    <fragment
+        android:id="@+id/nav_series"
+        android:name="com.listintime.ui.series.SeriesFragment"
+        android:label="@string/menu_series"
+        tools:layout="@layout/fragment_series" />
+
+    <fragment
+        android:id="@+id/nav_books"
+        android:name="com.listintime.ui.books.BooksFragment"
+        android:label="@string/menu_books"
+        tools:layout="@layout/fragment_series" />
+
+    <fragment
+        android:id="@+id/nav_games"
+        android:name="com.listintime.ui.games.GamesFragment"
+        android:label="@string/menu_games"
+        tools:layout="@layout/fragment_series" />
+
+    <fragment
+        android:id="@+id/nav_media"
+        android:name="com.listintime.ui.media.MediaListFragment"
+        tools:layout="@layout/fragment_media_list" />
+</navigation>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/list_background">
+
+    <ImageView
+        android:id="@+id/mediaImage"
+        android:contentDescription="@string/image_of_media"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/comment"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:contentDescription="@string/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/favoriteButton"/>
+
+    <ImageView
+        android:id="@+id/favoriteButton"
+        android:src="@drawable/ic_baseline_star_border_24"
+        android:contentDescription="@string/favorite_button"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/deleteButton"
+        app:layout_constraintBottom_toTopOf="@id/ratingSpinner"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/editButton"
+        android:src="@drawable/ic_baseline_create_24"
+        android:contentDescription="@string/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/favoriteButton"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"/>
+
+    <TextView
+        android:id="@+id/mediaName"
+        android:text="Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mediaInformation"
+        app:layout_constraintLeft_toRightOf="@id/mediaImage"
+        app:layout_constraintRight_toLeftOf="@id/editButton"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/mediaInformation"
+        android:text="Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mediaName"
+        app:layout_constraintBottom_toTopOf="@id/comment"
+        app:layout_constraintLeft_toRightOf="@id/mediaImage"
+        app:layout_constraintRight_toLeftOf="@id/editButton"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp" />
+
+    <Spinner
+        android:id="@+id/ratingSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end|center_vertical"
+        android:paddingRight="0dp"
+        android:paddingStart="2dp"
+        app:layout_constraintTop_toBottomOf="@id/favoriteButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/comment"
+        android:paddingEnd="0dp"
+        android:paddingLeft="2dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="mediaInformation, comment, ratingSpinner, mediaImage"
+        />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:text="Ceci est un commentaire"
+        android:textAlignment="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mediaImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center_horizontal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
