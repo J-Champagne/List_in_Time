@@ -10,7 +10,7 @@ directly on your phone.
 
 3. Fill a list by searching from databases on the internet.
 
-4. Various actions are available for tailoring each item on your list such as 
+4. A multitude of actions for tailoring each item on your list such as 
    adding a comment, setting as favorite, deleting, and giving it a score.
 
 5. Various sorting options to better visualize your existing lists.  
