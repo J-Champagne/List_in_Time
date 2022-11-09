@@ -3,7 +3,7 @@
 This android app lets you create, fill, sort, and maintain lists of your favorite media
 directly on your phone.
 
-                           |  
+List of books              | Main menu 
 :-------------------------:|:-------------------------:
 ![](Image.png)             |  ![](Image2.png)
 
