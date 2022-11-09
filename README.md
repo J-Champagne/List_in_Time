@@ -3,6 +3,10 @@
 This android app lets you create, fill, sort, and maintain lists of your favorite media
 directly on your phone.
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](Image.png)             |  ![](Image2.png)
+
 ## Features
 1. Create various profiles with their own set of lists.
 
